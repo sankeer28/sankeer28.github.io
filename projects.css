@@ -61,6 +61,15 @@
   margin: var(--dl-space-space-unit);
 }
 
+.component6-container {
+  display: flex;
+  position: relative;
+}
+.component6-icon {
+  width: 24px;
+  height: 24px;
+}
+
 .primary-pink-button-container {
   display: flex;
   position: relative;
@@ -96,10 +105,7 @@
 }
 @media(max-width: 479px) {
   .primary-pink-button-root-class-name2 {
-    margin-top: 0px;
-    margin-left: var(--dl-space-space-halfunit);
-    margin-right: var(--dl-space-space-halfunit);
-    margin-bottom: 0px;
+    margin: 0px;
   }
   .primary-pink-button-root-class-name3 {
     margin-top: 0px;
@@ -162,21 +168,13 @@
 .header-navlink1 {
   display: contents;
 }
-.header-icon {
-  width: 24px;
-  height: 24px;
-  text-decoration: none;
-}
-.header-navlink2 {
-  display: contents;
-}
-.header-component {
+.header-component1 {
   text-decoration: none;
 }
 .header-link {
   display: contents;
 }
-.header-component1 {
+.header-component2 {
   text-decoration: none;
 }
 .header-container1 {
@@ -222,7 +220,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.header-navlink3 {
+.header-navlink2 {
   color: var(--dl-color-secondary-700);
   font-weight: 600;
   text-decoration: none;
@@ -233,7 +231,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.header-icon2 {
+.header-icon {
   width: 24px;
   height: 24px;
 }
@@ -253,12 +251,12 @@
   margin-bottom: var(--dl-space-space-unit);
   flex-direction: column;
 }
-.header-navlink4 {
+.header-navlink3 {
   transition: 0.3s;
   margin-bottom: var(--dl-space-space-halfunit);
   text-decoration: none;
 }
-.header-navlink4:hover {
+.header-navlink3:hover {
   color: var(--dl-color-gray-500);
 }
 .header-text {
@@ -322,11 +320,10 @@
 }
 @media(max-width: 479px) {
   .header-navlink {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .header-icon {
-    margin: var(--dl-space-space-halfunit);
+    width: auto;
+    height: auto;
+    margin: 0px;
+    text-align: left;
   }
   .header-root-class-name3 {
     top: 1px;
@@ -467,7 +464,7 @@
     left: 73px;
     width: auto;
     bottom: 42px;
-    height: 128px;
+    height: auto;
     margin: var(--dl-space-space-unitandahalfunit);
     padding: var(--dl-space-space-unitandahalfunit);
     position: static;

@@ -33,10 +33,7 @@
 }
 @media(max-width: 479px) {
   .primary-pink-button-root-class-name2 {
-    margin-top: 0px;
-    margin-left: var(--dl-space-space-halfunit);
-    margin-right: var(--dl-space-space-halfunit);
-    margin-bottom: 0px;
+    margin: 0px;
   }
   .primary-pink-button-root-class-name3 {
     margin-top: 0px;
