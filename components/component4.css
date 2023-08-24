@@ -5,3 +5,6 @@
 .component4-container1 {
   display: contents;
 }
+.component4-root-class-name {
+  margin: var(--dl-space-space-unit);
+}

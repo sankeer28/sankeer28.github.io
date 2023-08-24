@@ -1,19 +1,23 @@
 .primary-pink-button-container {
   display: flex;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
 .primary-pink-button-button {
   color: var(--dl-color-gray-white);
+  width: 83px;
+  height: 35px;
   outline: none;
   background: linear-gradient( 310deg ,#7928ca,#ff0080);
   box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
   transition: all .15s ease-in;
-  padding-top: var(--dl-space-space-triplequarterunit);
+  padding-top: 0px;
   border-width: 0px;
-  padding-left: var(--dl-space-space-unitandahalfunit);
+  padding-left: 0px;
   border-radius: 1.875rem;
-  padding-right: var(--dl-space-space-unitandahalfunit);
-  padding-bottom: var(--dl-space-space-triplequarterunit);
+  padding-right: 0px;
+  padding-bottom: 0px;
 }
 .primary-pink-button-button:hover {
   cursor: pointer;
@@ -238,6 +242,10 @@
   left: -2px;
   width: 100%;
   max-width: auto;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: var(--dl-space-space-unitandahalfunit);
 }
 @media(max-width: 991px) {
   .header-nav {
