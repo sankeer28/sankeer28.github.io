@@ -596,8 +596,9 @@
     height: 50px;
   }
   .home-hero {
-    height: 683px;
+    height: auto;
     max-width: auto;
+    align-self: center;
     margin-top: var(--dl-space-space-sixunits);
   }
   .home-card {
@@ -605,9 +606,14 @@
     left: -371px;
     right: -7px;
     width: auto;
-    height: 559px;
+    height: auto;
+    margin: 0px;
     padding: var(--dl-space-space-unit);
     position: static;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
   .home-text5 {
     top: 100px;
