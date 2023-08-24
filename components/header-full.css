@@ -19,10 +19,6 @@
   cursor: pointer;
   transform: scale(1.02);
 }
-.primary-pink-button-root-class-name {
-  align-self: center;
-  text-align: center;
-}
 .primary-pink-button-root-class-name2 {
   align-self: center;
   text-align: center;
@@ -32,11 +28,17 @@
   text-align: center;
 }
 @media(max-width: 479px) {
-  .primary-pink-button-root-class-name {
-    flex: 1;
-    width: 100%;
-    height: auto;
-    margin-left: 0px;
+  .primary-pink-button-root-class-name2 {
+    margin-top: 0px;
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+    margin-bottom: 0px;
+  }
+  .primary-pink-button-root-class-name3 {
+    margin-top: 0px;
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+    margin-bottom: 0px;
   }
 }
 

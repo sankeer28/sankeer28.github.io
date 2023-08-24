@@ -19,10 +19,6 @@
   cursor: pointer;
   transform: scale(1.02);
 }
-.primary-pink-button-root-class-name {
-  align-self: center;
-  text-align: center;
-}
 .primary-pink-button-root-class-name2 {
   align-self: center;
   text-align: center;
@@ -32,11 +28,17 @@
   text-align: center;
 }
 @media(max-width: 479px) {
-  .primary-pink-button-root-class-name {
-    flex: 1;
-    width: 100%;
-    height: auto;
-    margin-left: 0px;
+  .primary-pink-button-root-class-name2 {
+    margin-top: 0px;
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+    margin-bottom: 0px;
+  }
+  .primary-pink-button-root-class-name3 {
+    margin-top: 0px;
+    margin-left: var(--dl-space-space-halfunit);
+    margin-right: var(--dl-space-space-halfunit);
+    margin-bottom: 0px;
   }
 }
 
@@ -61,7 +63,6 @@
   height: 60px;
   display: flex;
   flex-wrap: wrap;
-  align-self: center;
   box-shadow: 0 .25rem .375rem -.0625rem hsla(0,0%,8%,.12),0 .125rem .25rem -.0625rem hsla(0,0%,8%,.07)!important;
   margin-top: var(--dl-space-space-unit);
   align-items: center;
@@ -105,16 +106,10 @@
 .header-component {
   text-decoration: none;
 }
-.header-navlink3 {
-  display: contents;
-}
-.header-component1 {
-  text-decoration: none;
-}
 .header-link {
   display: contents;
 }
-.header-component2 {
+.header-component1 {
   text-decoration: none;
 }
 .header-container1 {
@@ -160,7 +155,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.header-navlink4 {
+.header-navlink3 {
   color: var(--dl-color-secondary-700);
   font-weight: 600;
   text-decoration: none;
@@ -191,12 +186,12 @@
   margin-bottom: var(--dl-space-space-unit);
   flex-direction: column;
 }
-.header-navlink5 {
+.header-navlink4 {
   transition: 0.3s;
   margin-bottom: var(--dl-space-space-halfunit);
   text-decoration: none;
 }
-.header-navlink5:hover {
+.header-navlink4:hover {
   color: var(--dl-color-gray-500);
 }
 .header-text {
@@ -259,8 +254,16 @@
     margin-left: 0px;
     margin-right: 0px;
   }
+  .header-icon {
+    margin: var(--dl-space-space-halfunit);
+  }
   .header-root-class-name3 {
     top: 1px;
     left: -10px;
+  }
+  .header-root-class-name4 {
+    top: -1px;
+    left: -1px;
+    position: 0px;
   }
 }

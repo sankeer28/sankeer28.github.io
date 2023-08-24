@@ -1,0 +1,12 @@
+.component1-container {
+  display: flex;
+  position: relative;
+}
+.component1-container1 {
+  display: contents;
+}
+@media(max-width: 479px) {
+  .component1-container1 {
+    margin: var(--dl-space-space-halfunit);
+  }
+}
