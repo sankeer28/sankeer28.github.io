@@ -136,28 +136,29 @@ body.dark-mode {
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .nav-items {
-        justify-content: flex-start;
-    }
-    title, .email, .message, .send-button {
-        text-align: center;
-    }
-    .navbar-image {
-        width: 100%; /* or whatever width you want */
-        height: auto;
-    }
-    .navbar-box {
-        display: block;
-        text-align: center;
-        padding: 10px 0;
-    }
     .navbar {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-left: 10px; /* Reduce the left margin */
-    }
+        flex-direction: column;
+        align-items: left;
+        margin-left: 0; /* Remove the left margin */
+      }
+      .navbar a, .navbar-row {
+        padding: 10px 0;
+        text-align: left;
+        margin: 0 5px;
+      }
+      .navbar-row {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+      }
+
+      .navbar a, .navbar-row {
+        padding: 10px 0;
+        text-align: left;
+        margin-right: 5px;
+        margin-left: 0;
+      }
   }
 
 /*Stars*/

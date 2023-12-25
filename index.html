@@ -2,7 +2,7 @@
 <html>
   <head>
     <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
     <title>👨‍💻Sankeer</title>
     <link rel="icon" href="resources/images/logo-white.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,11 +48,11 @@
         <h1 class="dark-mode info-nopad ">Hi There,<img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="46"> </h1>
         <h1 id="name" class="dark-mode info name-with-image smooth-transition sankeer" style="transition: background-color 0.3s ease;">I'm Sankeer</h1>        
         <img id="tiltImage" src="./resources/images/sankeer.png" alt="Description of the image" class="tilt-image sankeer-image" style="position: absolute; right: 150px; top: 180px; width: 420px; height: 420px;">       
-         <div style="display: flex; align-items: center; margin-left: 99px;">
-          <span class="dark-mode info-p" style="margin-right: 10px; margin-bottom: 25px; font-size: 28px; font-weight: 600; font-family: 'Poppins', sans-serif;">I am a</span>
+         <div style="display: flex; align-items: left; margin-left: 5%">
+          <span class="dark-mode info-p hidden-mobile" style="margin-right: 15px; margin-bottom: 25px; font-size: 28px; font-weight: 600; font-family: 'Poppins', sans-serif;">I am a</span>
           <a href="https://github.com/DenverCoder1/readme-typing-svg">
               <a href="https://git.io/typing-svg">
-                  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=27&pause=1000&color=F78E42&random=false&width=435&lines=Computer+Science+Undergrad;Programmer;Active+Learner;Developer" alt="Typing SVG" />
+                  <img class="typing-svg" src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=27&pause=1000&color=F78E42&random=false&width=435&lines=Computer+Science+Undergrad;Programmer;Active+Learner;Developer" alt="Typing SVG" />
               </a>
           </a>
       </div>
@@ -76,22 +76,24 @@
     
 
    <!--About Me-->
-   
+   <div class="info-container">
 <div id="about-section" class="info ">
   <h1 class="dark-mode info-nopad">About Me</h1>
-  <p class="dark-mode info-p left-side"><strong>I am currently a second-year undergraduate student at Toronto Metropolitan University, 
+  <p style="display: flex; align-items: center; margin-left: 5%" class="dark-mode info-p left-side"><strong>I am currently a second-year undergraduate student at Toronto Metropolitan University, 
     where I am pursuing a B.Sc degree in Computer Science. I am passionate about technology and its potential to change the world.</strong></p>
-    <img class="top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sankeer28&hide_progress=false&theme=transparent&hide_border=true" alt="Top Languages">
+      <img class="top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sankeer28&hide_progress=false&theme=transparent&hide_border=true" alt="Top Languages">
+     </div>
   </div>
+
 
 
 
    
    <!--Image--https://devicon.dev/-->
-
+   
    <div class="flex-container">
 <div class="left-side">
-  <div class="image-grid">
+  <div class="image-grid hidden-mobile">
     <img class="skill-icon-left-margin" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original-wordmark.svg" />
     <img class="skill-icon skill-icon-left-margin" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" />
     <img class="skill-icon-left-margin"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-plain.svg" />
@@ -130,6 +132,7 @@
     <!-- Add more images as needed -->
 </div>
 </div>
+
     <!--Skills-->
     <div id="skills-section" class="right-side">
       <h1 class="dark-mode info-nopad">Skills</h1>
@@ -149,7 +152,7 @@
           <img src="./resources/images/tmu.jpg" alt="TMU">
       </div>
       <div class="image">
-          <img src="./resources/images/tmu_logo.jpg" alt="Your Image"> <!-- Replace with your image path -->
+          <img  class="tmu-logo" src="./resources/images/tmu_logo.jpg" alt="Your Image"> <!-- Replace with your image path -->
       </div>
       <div class="content">
           <h3><strong>B.Sc (Honours) Computer Science</strong></h3>
