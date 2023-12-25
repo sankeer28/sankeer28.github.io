@@ -1,0 +1,592 @@
+body {
+    background-color: rgb(23, 28, 40);
+    transition: background-color 0.3s; /* smooth color change */
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.long-name {
+  color: orange; /* Set the text color to orange */
+}
+
+article {
+  margin-top: 80px; /* Adjust as needed */
+  margin-left: 30px;
+}
+
+
+#name:hover {
+  color: rgb(233, 146, 47);
+}
+
+.dark-mode {
+    color: #FFFFFF; /* white text in dark mode */
+    background-color: #171C28; /* dark background in dark mode */
+    transition: background-color 0.3s, color 0.3s; /* smooth color change */
+}
+
+.light-mode {
+    color: #000000; /* black text in light mode */
+    background-color: #FFFFFF; /* white background in light mode */
+    transition: background-color 0.3s, color 0.3s; /* smooth color change */
+}
+
+
+body.light-mode {
+    background-color: lightblue;
+}
+
+body.dark-mode {
+    background-color: rgb(23, 28, 40);
+}
+
+.info {
+  transition: background-color 0.3s; /* smooth color change */
+}
+
+.info, .info-p, .info-nopad {
+    transition: background-color 0.3s; /* smooth color change */
+}
+
+.info-p {
+  transition: background-color 0.3s ease;
+}
+
+
+.light-mode .info-p {
+  background-color: lightblue;
+  color: #000000; /* black text in light mode */
+}
+  
+.navbar {
+  display: flex;
+  justify-content: space-between; /* distributes items evenly in the container */
+  padding: 0 20px; /* adds some space on the left and right side of the navbar */
+  /* rest of your styles */
+}
+
+.navbar .image-container img {
+  width: 100px; /* adjust as needed */
+  height: 100px; /* adjust as needed */
+}
+
+.navbar .nav-items {
+  display: flex;
+  justify-content: flex-end; /* aligns items to the right side of the container */
+  align-items: center; /* aligns items vertically in the middle */
+  /* rest of your styles */
+}
+
+.image-background {
+  background: rgba(255, 255, 255, 0.5); /* white background with 50% opacity */
+  border-radius: 20px; /* curved corners */
+  margin-top: 10px; /* top margin */
+}
+
+/* Dark mode styles */
+body.dark-mode .navbar img {
+    filter: invert(1); /* Invert the color of the image to white*/
+}
+
+  
+  .navbar a {
+    color: #FFFFFF; /* white text */
+    font-family: 'Montserrat', sans-serif; /* Montserrat font */
+    font-size: 19px; /* adjust as needed */
+    padding: 15px 20px; /* padding to create the box */
+    text-decoration: none;
+    background-color: transparent; /* remove button background */
+    transition: background-color 0.3s; /* smooth color change */
+  }
+  
+/* Light mode styles for navbar boxes */
+body.light-mode .navbar-box:hover {
+  background-color: rgb(23, 28, 40); /* dark blue background on hover in light mode */
+  transition: background-color 0.5s ease; 
+}
+
+/* Dark mode styles for navbar boxes */
+body.dark-mode .navbar .navbar-box:hover {
+    background-color: #1f687c; /* gold color change on hover in dark mode */
+    transition: background-color 0.5s ease; 
+}
+
+  .info {
+    width: auto;
+    height: 450px;
+    margin: 0px 0px 30px 0px;
+  }
+
+  h2.info {
+    font-size: 30px !important; /* This will override any other font-size property */
+  }
+#name {
+  transition: opacity 2s ease; /* Adjust time as needed */
+}
+
+#name .long-name {
+  opacity: 0;
+  transition: opacity 2s ease; /* Adjust time as needed */
+}
+
+#name:hover .long-name {
+  opacity: 1;
+}
+
+
+.education {
+  background-color: rgba(255, 255, 255, 0.5); /* Translucent white background */
+  display: flex; /* Align the image and text side by side */
+  margin-left: 99px; /* Set the left margin to 99px */
+  margin-right: 40%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; /* Add this line */
+}
+
+.education:hover {
+  transform: scale(1.05); /* Add this line */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.education-image {
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  margin-right: 50px; /* Add some space to the right of the image */
+}
+
+.education-text {
+  color: #000; /* Set the text color to black */
+  max-width: 800x; /* Limit the paragraph length */
+  font-size: 1em; /* Set the font size */
+  line-height: 1.6; /* Set the line height */
+  
+}
+
+.education-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Change this line */
+}
+
+
+.toggle-switch {
+  display: none;
+}
+
+.sankeer {
+  background-size: 200% auto;
+  color: #fff;
+  background-image: linear-gradient(45deg, #ffad70, #f7d297, #edb9a1, #e697ac, #b38dca, #9c76db, #705cb5, #43428e, #2c2142);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+
+
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%; /* Further increase the width of the container */
+  margin: 0px ; /* Center the container */
+}
+
+.box {
+  background-color: transparent;
+  border-radius: 10px;
+  width: 105%;
+  display: flex;
+  flex-direction: row; /* Add this line */
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.image {
+  width: 30%; /* Decrease the width to reduce the gap between the images */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 10px; /* Decrease the margin to the left side of the image */
+  margin: 18px
+}
+
+.image img {
+  width: 200px; /* Set the width to 100px */
+  height: 200px; /* Set the height to 100px */
+  object-fit: cover; /* Adjust the image to cover the entire area of its container */
+  border-radius: 10px; /* Make the corners curved */
+  margin-left: 10px;
+}
+
+.content {
+  width: 60%; /* Increase the width */
+  color: #000; /* Set the text color to black */
+  max-width: 800px; /* Limit the paragraph length */
+  font-size: 1.4em; /* Increase the font size */
+  line-height: 1.4; /* Set the line height */
+  margin: 0px;
+}
+
+h1.dark-mode.info, h2.dark-mode.info {
+    width: auto;
+    height: 55px;
+    color: #FFFFFF;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #171C28;
+    margin: 33px 0px 0px 99px;
+    padding-bottom: 2%;
+}
+
+h2.dark-mode.info {
+    font-size: 30px !important; /* This will override any other font-size property */
+}
+
+h1.dark-mode.info-nopad {
+    
+    height: 55px;
+    color: #FFFFFF;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #171C28;
+    margin-left: 99px;
+    /* No padding-bottom property */
+}
+
+p.dark-mode.info-p, li.dark-mode.info-p {
+    color: #FFFFFF; /* white text in dark mode */
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #171C28; /* dark background in dark mode */
+    margin: 0px 50px 30px 99px;
+    line-height: 1.6; /* increase line spacing */
+}
+
+.left-side {
+  width: 50% !important;
+}
+
+.left-side img {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+
+  margin-right: 20px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-grid img {
+    width: 80% ;/* Adjust as needed */
+    height: auto;
+}
+
+.right-side {
+  width: 50%;
+  float: right;
+  margin-top: -10px; 
+}
+.education-header {
+  margin-top: 200px;
+}
+
+.projects-header {
+  margin-top: 180px;
+  text-align: center;
+}
+
+.projects {
+  margin-top: 20px;
+  font-size: 1em; /* Adjust as needed */
+}
+
+/* Dark mode styles */
+body.dark-mode .skill-icon {
+  filter: invert(1); /* Invert the color of the skill icon to white */
+}
+/* Light mode styles */
+body.light-mode .skill-icon {
+  filter: invert(0); /* Ensure the icon is in its original color */
+  
+}
+
+
+.skill-icon-left-margin {
+  margin-left: 99px; /* Adjust as needed */
+  transition: transform 0.3s ease-in-out; /* Add this line */
+}
+
+.skill-icon-left-margin:hover {
+  filter: drop-shadow(0 0 10px #ffffff); /* Adjust color and size as needed */
+  transform: scale(1.1); /* Add this line */
+}
+
+/* Dark mode styles */
+/* Dark mode styles */
+h1.dark-mode.info, h1.dark-mode.info-h, h1.dark-mode.info-nopad, p.dark-mode.info-p {
+  color: #FFFFFF; /* white text in dark mode */
+  background-color: #171C28; /* dark background in dark mode */
+}
+
+/* Light mode styles */
+body.light-mode h1.dark-mode.info, body.light-mode h1.dark-mode.info-h, body.light-mode h1.dark-mode.info-nopad, body.light-mode p.dark-mode.info-p {
+  background-color: lightblue; /* light background in light mode */
+  color: #000000; /* black text in light mode */
+}
+
+  /* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+    h1.dark-mode.info, h1.dark-mode.info-nopad {
+      font-size: 30px; /* smaller font size */
+      margin-left: 20px; /* smaller margin */
+    }
+  
+    p.dark-mode.info-p {
+      font-size: 16px; /* smaller font size */
+      margin: 0px 0px 20px 20px; /* smaller margin */
+    }
+  }
+
+
+  .smooth-transition {
+    transition: background 0.3s ease;
+}
+
+.tilt-image {
+  transition: transform 0.3s ease;
+  backface-visibility: hidden;
+}
+
+.tilt-image:hover {
+  transform: perspective(600px) rotateY(20deg);
+}
+
+
+
+/*icons*/
+.social-icons img {
+    width: 60px;
+    height: 60px;
+    margin: 30px 0px 4px 97px;
+
+}
+
+.social-icons a {
+    text-decoration: none; 
+}
+
+/* Dark mode styles */
+body.dark-mode .social-icons img {
+    filter: brightness(0) invert(1); 
+}
+/* Light mode styles */
+body.light-mode .social-icons img {
+    filter: none; 
+}
+
+/* Dark mode hover styles */
+body.dark-mode .social-icons img:hover {
+    filter: brightness(0) invert(1) sepia(1) saturate(10000%) hue-rotate(520deg); 
+}
+
+/* Light mode hover styles */
+body.light-mode .social-icons img:hover {
+    filter: brightness(0) invert(1); 
+}
+
+
+
+  
+/* switch settings 👇 */
+
+.ui-switch {
+  /* switch */
+  --switch-bg: rgb(135, 150, 165);
+  --switch-width: 48px;
+  --switch-height: 20px;
+  /* circle */
+  --circle-diameter: 32px;
+  --circle-bg: rgb(0, 56, 146);
+  --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+}
+
+
+.ui-switch input {
+  display: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background: var(--switch-bg);
+  border-radius: 999px;
+  position: relative;
+}
+.slider .circle {
+  top: calc(var(--circle-inset) * -1);
+  left: 0;
+  width: var(--circle-diameter);
+  height: var(--circle-diameter);
+  position: absolute;
+  background: var(--circle-bg);
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  ;
+}
+
+.slider .circle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent; /* or set it to your background color */
+  border-radius: inherit;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 0;
+}
+/* actions */
+
+.ui-switch input:checked+.slider .circle {
+  left: calc(100% - var(--circle-diameter));
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+  
+}
+
+.ui-switch input:active+.slider .circle::before {
+  -webkit-transition: 0s !important;
+  -o-transition: 0s !important;
+  transition: 0s !important;
+  opacity: 0 !important; /* set opacity to 0 to remove the hover effect */
+  width: 0;
+  height: 0;
+  background: transparent !important; /* or set it to your background color */
+}
+
+.ui-switch input:active+.slider .circle,
+.ui-switch input:focus+.slider .circle {
+  background:rgb(135, 150, 165); /* your normal background color */;
+}
+
+
+.icon-changed {
+  color: #ff0000; /* change to the color you want */
+}
+.icon {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a drop shadow */
+}
+
+.top-langs {
+  float: right;
+  margin-top: -230px;
+  margin-right: 200px; /* Adjust as needed */
+  /* Add any additional styles as needed */
+}
+
+.project-images {
+  display: flex;
+  justify-content: flex-start; /* Change this line */
+  flex-wrap: wrap;
+}
+
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px; /* Adjust as needed to change the spacing between the images */
+  margin: 0px 80px 0px 99px; /* Add this line */
+}
+
+.project-images img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  margin: 10px 0;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add this line */
+}
+
+.project-images img:hover {
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7); /* Add this line */
+  transform: scale(1.05); /* Add this line */
+}
+
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  /* Add any additional styles as needed */
+}
+
+#scroll-button {
+  position: fixed;
+  bottom: 50px;
+  left: 20px;
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  opacity: 0.4;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transform to the transition */
+  border-radius: 25px;
+  font-size: 50px;
+  background: none; /* Add this line */
+  border: none; /* Add this line */
+}
+
+#scroll-button:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 15px 0px 2px 48px;
+  }
+}
+
