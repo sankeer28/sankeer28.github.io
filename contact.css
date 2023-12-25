@@ -101,6 +101,16 @@ h1 {
     display:block;
 }
 
+.image-background {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 body {
     /* Light mode */
     background-color: #add8e6 !important; /* Light blue */
@@ -118,6 +128,35 @@ body.dark-mode {
       width: 30px;
       height: 30px;
       margin: 15px 0px 2px 48px;
+    }
+    #fcf-form {
+        width: 88%;
+        padding: 1;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .nav-items {
+        justify-content: flex-start;
+    }
+    title, .email, .message, .send-button {
+        text-align: center;
+    }
+    .navbar-image {
+        width: 100%; /* or whatever width you want */
+        height: auto;
+    }
+    .navbar-box {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 10px; /* Reduce the left margin */
     }
   }
 
