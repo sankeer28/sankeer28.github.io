@@ -19,6 +19,8 @@ article {
 }
 
 
+
+
 #name:hover {
   color: rgb(233, 146, 47);
 }
@@ -314,6 +316,8 @@ p.dark-mode.info-p, li.dark-mode.info-p {
   float: right;
   margin-top: -10px; 
 }
+
+
 .education-header {
   margin-top: 200px;
 }
@@ -758,7 +762,14 @@ span.dark-mode.info-p {
 
 @media screen and (max-width: 768px) {
   .right-side {
-    float: left;
-    margin-right:45%; /* Float the element to the left on mobile */
+    width: 300%; /* Make the element span the entire screen width on mobile */
+    float: left; /* Remove the float property on mobile */
+    margin: 8% auto; /* Center the element on mobile */
+    margin-left: -15%;
+    margin-right: 5%;
   }
+  .skills{
+    margin-left: -10%;
+  }
+  
 }

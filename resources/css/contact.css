@@ -161,6 +161,10 @@ body.dark-mode {
       }
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
 /*Stars*/
 /*Stars*/
 /*Stars*/
