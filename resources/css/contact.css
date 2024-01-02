@@ -22,9 +22,6 @@ body, html {
     z-index: -1; /* Lower value */
   }
 
-
-
-
 .form-group label {
     display: block;
     margin-bottom: 5px;
@@ -87,6 +84,10 @@ h1 {
     text-transform: uppercase;
 }
 
+.centered-title {
+    text-align: center; /* Center the text */
+  }
+
 .dark-mode {
     background-color: rgb(23, 28, 40) !important;
 }
@@ -106,10 +107,7 @@ h1 {
     height: auto;
 }
 
-.nav-items {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 body {
     /* Light mode */
@@ -122,6 +120,8 @@ body.dark-mode {
     background-color: rgb(23, 28, 40) !important; /* Updated */
     color: #fff;
 }
+
+
 
 @media screen and (max-width: 600px) {
     .social-icons img {
@@ -138,28 +138,33 @@ body.dark-mode {
     }
     .navbar {
         display: flex;
-        flex-direction: column;
-        align-items: left;
-        margin-left: 0; /* Remove the left margin */
-      }
-      .navbar a, .navbar-row {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .navbar a, .navbar-row {
         padding: 10px 0;
-        text-align: left;
-        margin: 0 5px;
-      }
-      .navbar-row {
+        text-align: center;
+        margin: 0 2px; /* Adjust this line */
+    }
+    .navbar-row {
         display: flex;
-        justify-content: left;
+        justify-content: center;
         width: 100%;
-      }
+        flex-wrap: nowrap; /* Add this line */
+    }
+    }
+    
+    .navbar-box {
+        margin: 0 2px; /* Adjust this line */
+    }
 
-      .navbar a, .navbar-row {
-        padding: 10px 0;
-        text-align: left;
-        margin-right: 5px;
-        margin-left: 0;
-      }
-  }
+    .header {
+    display: flex; /* Add this line */
+    flex-direction: row; /* Add this line */
+    padding: 0;
+    margin: -20px;
+}
 
   html {
     scroll-behavior: smooth;
