@@ -9,20 +9,10 @@ html {
   scroll-behavior: smooth;
 }
 
-.long-name {
-  color: orange; /* Set the text color to orange */
-}
 
 article {
   margin-top: 7%; /* Adjust as needed */
   margin-left: 1%;
-}
-
-
-
-
-#name:hover {
-  color: rgb(233, 146, 47);
 }
 
 .dark-mode {
@@ -36,7 +26,6 @@ article {
     background-color: #FFFFFF; /* white background in light mode */
     transition: background-color 0.3s, color 0.3s; /* smooth color change */
 }
-
 
 body.light-mode {
     background-color: lightblue;
@@ -596,7 +585,10 @@ body.light-mode .social-icons img:hover {
 #scroll-button:hover {
   opacity: 1;
   transform: scale(1.2);
+  * 
 }
+
+
 
 @media screen and (max-width: 1200px) {
   .social-icons img {
@@ -604,9 +596,7 @@ body.light-mode .social-icons img:hover {
     height: 30px;
     margin: 15px 0px 2px 48px;
   }
-  .sankeer-image {
-    display: none;
-}
+  
 .navbar {
   display: flex;
   flex-direction: column;
@@ -631,13 +621,21 @@ span.dark-mode.info-p {
 
 }
 
+.education {
+  width: 90vw; /* Make the element span the entire screen width */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  margin: 5%; /* Remove margins */
+  padding: 1%; /* Adjust padding as needed */
+}
+
 @media screen and (max-width: 768px) {
   .education {
-    display: block; /* Stack the image and text vertically */
-    margin-left: 0; /* Remove the left margin */
-    margin-right: 0; /* Remove the right margin */
-    font-size: 0.8em;
+    width: 100vw; /* Make the element span the entire screen width on mobile */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    margin: 0; /* Remove margins */
+    padding: 0; /* Adjust padding as needed */
   }
+
   .tmu-logo {
     display: none;
   }
@@ -654,21 +652,31 @@ span.dark-mode.info-p {
     margin-right: 0; /* Remove the right margin */
   }
 
-  .education-text {
-    max-width: 100%; /* Allow the paragraph to take up the full width */
+  .education-container {
+    padding-left: 5555; /* Adjust this value as needed */
+    margin-left: 5%; /* Adjust this value as needed */
   }
 
+  .education-text {
+    max-width: 100%; /* Allow the paragraph to take up the full width */
+    font-size: 14px;
+    padding-left: 0; /* Adjust this value as needed */
+    margin-right: 35%; /* Adjust this value as needed */
+  }
   .hidden-mobile{
     display:none;
   }
 
   .project-images img {
-    width: 100%; /* Adjust as needed */
-    height: 100%; /* Adjust as needed */
+    width: auto; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
     margin: auto; 
-    margin-left: -24%;/* Keep the images centered */
-    border-radius: 10px;
+    margin-left: -25%;/* Keep the images centered */
+    border-radius: 14px;
   }
+
+
+ 
 
   
 
@@ -682,13 +690,76 @@ span.dark-mode.info-p {
  
 }
 
+/*Ipad Air*/
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+  .ipad {
+    padding-left: 6.5%;
+    margin-bottom: -60%;
+  }
 
+  .project-images img {
+    width: auto; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    margin: auto; 
+    border-radius: 14px;
+  }
+
+  .project-images {
+    display: flex; /* Make the container a flex container */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+}
+/*Ipad Pro*/
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .ipad {
+    padding-left: 6.5%;
+    margin-bottom: -60%;
+  }
+
+  .project-images img {
+    width: auto; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    margin: auto; 
+    border-radius: 14px;
+  }
+  .project-images {
+    display: flex; /* Make the container a flex container */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+
+}
+/*Ipad mini*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .ipad {
+    padding-left: 6.5%;
+    margin-bottom: -60%;
+  }
+
+  .project-images img {
+    width: auto; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+    margin: auto; 
+    border-radius: 14px;
+  }
+
+  .project-images {
+    display: flex; /* Make the container a flex container */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .social-icons img {
     width: 5vw; /* Adjust as needed */
     height: 5vw; /* Adjust as needed */
     margin: 1vw 0 0.2vw 4.8vw; /* Adjust as needed */
+  }
+
+  .hidden-mobile1 {
+    display: none;
   }
   /* ...rest of your CSS... */
 }
@@ -739,6 +810,7 @@ span.dark-mode.info-p {
 .info-container {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .info-container p {
@@ -749,17 +821,7 @@ span.dark-mode.info-p {
   order: 2;
 }
 
-@media screen and (max-width: 768px) {
-  .info-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .info-container img {
-    margin-top: 30px;
-    margin-left: 200px; /* Add some space to the left of the image */
-  }
-}
 
 @media screen and (max-width: 768px) {
   .right-side {
@@ -772,5 +834,51 @@ span.dark-mode.info-p {
   .skills{
     margin-left: -10%;
   }
+  .info-container {
+    width: 170%; /* Adjust this line */
+    box-sizing: border-box; /* Add this line */
+    padding-left: 5%; /* Add this line */
+    margin-bottom: -30%;
+  }
+ 
+  .intro, .typing-svg {
+    margin-top: 3%;
+    margin-left: 5%; /* Add this line */
+  }
+  .intro {
+    padding-left: 5%; /* Add this line */
+  }
+  .education-header{
+    text-align: center;
+  }
+  .greeting {
+    padding-left: 5%; /* Add this line */
+  }
+
+  .greeting, #name {
+    padding-left: 5%; /* Add this line */
+  }
+
   
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  /* Your existing styles */
+
+  .navbar {
+    display: flex; /* Add this line if not already present */
+    flex-wrap: wrap; /* Add this line */
+    justify-content: space-around; /* Add this line */
+  }
+
+  .education {
+    width: 100vw; /* Adjust this value as needed */
+  }
+
+  body {
+    width: 100vw; /* Adjust this value as needed */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
 }
