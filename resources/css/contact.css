@@ -11,7 +11,12 @@ body, html {
 
   body {
     overflow: hidden;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin: auto;
 }
+
+
 
 .form-group {
     margin-bottom: 15px;
@@ -122,6 +127,23 @@ body.dark-mode {
 }
 
 
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar .top-row {
+        order: 1;
+    }
+    .navbar .bottom-row {
+        order: 2;
+    }
+}
 
 @media screen and (max-width: 600px) {
     .social-icons img {
@@ -136,28 +158,10 @@ body.dark-mode {
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0 10px;
-    }
-    .navbar a, .navbar-row {
-        padding: 10px 0;
-        text-align: center;
-        margin: 0 2px; /* Adjust this line */
-    }
-    .navbar-row {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        flex-wrap: nowrap; /* Add this line */
-    }
-    }
+
     
-    .navbar-box {
-        margin: 0 2px; /* Adjust this line */
-    }
+}
+    
 
     .header {
     display: flex; /* Add this line */

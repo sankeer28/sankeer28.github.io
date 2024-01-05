@@ -55,8 +55,7 @@ body.dark-mode {
   
 .navbar {
   display: flex;
-  justify-content: space-between; /* distributes items evenly in the container */
-  padding: 0 6%; /* adds some space on the left and right side of the navbar */
+  justify-content: space-between; /* distributes items evenly in the container */ /* adds some space on the left and right side of the navbar */
   /* rest of your styles */
 }
 
@@ -601,7 +600,7 @@ body.light-mode .social-icons img:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 20px; /* Move the navbar to the right */
+  margin-left: 0; /* Move the navbar to the right */
 }
 .navbar a, .navbar-row {
   padding: 10px 0;
@@ -682,9 +681,10 @@ span.dark-mode.info-p {
 
   .typing-svg {
     width: 100%; /* Make the image take up the full width */
-    margin: 0; /* Remove all margin */
+    margin: 8%; /* Remove all margin */
     padding: 0; /* Remove all padding */
-    float: none; /* Remove float */
+     /* Remove float */
+
   }
 
  
@@ -692,9 +692,14 @@ span.dark-mode.info-p {
 
 /*Ipad Air*/
 @media screen and (min-width: 820px) and (max-width: 1180px) {
+  
   .ipad {
-    padding-left: 6.5%;
+    padding-left: 0;
     margin-bottom: -60%;
+  }
+
+  body .typing-svg {
+    margin-left: 14% !important;
   }
 
   .project-images img {
@@ -710,10 +715,18 @@ span.dark-mode.info-p {
     align-items: center; /* Center items vertically */
   }
 }
+
+
+/*Ipad Pro*/
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: portrait), screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+  body .typing-svg {
+    margin-left: 7% !important;
+  }
+}
 /*Ipad Pro*/
 @media screen and (min-width: 1024px) and (max-width: 1366px) {
   .ipad {
-    padding-left: 6.5%;
+    padding-left: 0;
     margin-bottom: -60%;
   }
 
@@ -737,6 +750,10 @@ span.dark-mode.info-p {
     margin-bottom: -60%;
   }
 
+  .intro, .typing-svg {
+    margin-top: 6%;
+    margin-left: 40%; /* Add this line */
+  }
   .project-images img {
     width: auto; /* Adjust as needed */
     height: auto; /* Adjust as needed */
@@ -842,7 +859,7 @@ span.dark-mode.info-p {
   }
  
   .intro, .typing-svg {
-    margin-top: 3%;
+    margin-top: 6%;
     margin-left: 5%; /* Add this line */
   }
   .intro {
