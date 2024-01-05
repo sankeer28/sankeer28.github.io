@@ -133,6 +133,13 @@ body.dark-mode {
     justify-content: space-around;
 }
 
+
+.image-background {
+    background: rgba(255, 255, 255, 0.5); /* white background with 50% opacity */
+    border-radius: 20px; /* curved corners */
+    margin-top: auto; /* top margin */
+  }
+
 @media screen and (max-width: 600px) {
     .navbar {
         flex-direction: column;
