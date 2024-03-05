@@ -9,6 +9,9 @@ window.onload = function() {
             document.body.classList.add('dark-mode');
         }
     });
+    window.location.reload();
+}
+
 
     var nameElement = document.getElementById('name');
     nameElement.addEventListener('mouseover', function() {
