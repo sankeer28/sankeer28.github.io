@@ -10,6 +10,7 @@ window.onload = function() {
         }
     });
 
+
     var nameElement = document.getElementById('name');
     nameElement.addEventListener('mouseover', function() {
         this.textContent = "I'm Sankeerthiken Nimalathas";
