@@ -26,8 +26,10 @@
         </div>
         <div class="nav-items ">
         <a href="#about" class="navbar-box">About</a>
+<!--
         <a href="#skills-section" class="navbar-box">Skills</a>
         <a href="#education-section" class="navbar-box">Education</a>
+---->
         <a href="#project-section" class="navbar-box">Projects</a>
         <a href="contact.html" class="navbar-box">Contact</a>
         <a><label class="ui-switch">
@@ -75,7 +77,7 @@
   <h1 class="dark-mode info-nopad  ">About Me</h1>
   <p style="display: flex; align-items:center" class="dark-mode info-p left-side"><strong>I am currently a second-year undergraduate student at Toronto Metropolitan University, 
     where I am pursuing a B.Sc degree in Computer Science. I am passionate about technology and its potential to change the world.</strong></p>
-      <img class="top-langs  hidden-mobile1" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sankeer28&hide_progress=false&theme=transparent&hide_border=true" alt="Top Languages">
+
      </div>
   </div>
 
@@ -83,7 +85,7 @@
 
 
    
-   <!--Image--https://devicon.dev/-->
+   <!--Image--https://devicon.dev/
    
    <div class="flex-container">
 <div class="left-side">
@@ -107,7 +109,7 @@
     <img class="skill-icon skill-icon-left-margin" src="./resources/images/icons/file17.svg" />
     <img class="skill-icon-left-margin" src="./resources/images/icons/file18.svg" />
     <img class="skill-icon-left-margin" src="./resources/images/icons/file19.svg" />
-    <img class="skill-icon-left-margin" src="./resources/images/icons/file20.svg" />
+    <img class="skill-icon-left-margin  skill-icon " src="./resources/images/icons/file20.svg" />
     <img class="skill-icon-left-margin" src="./resources/images/icons/file21.svg" />
     <img class="skill-icon-left-margin" src="./resources/images/icons/file22.svg" />
     <img class="skill-icon-left-margin" src="./resources/images/icons/file23.svg" />
@@ -127,11 +129,12 @@
 
 
 
-    <!-- Add more images as needed -->
+ 
 </div>
 </div>
+-->
 
-    <!--Skills-->
+    <!--Skills
     <div id="skills-section" class="right-side skills" >
       <h1 class="dark-mode info-nopad">Skills</h1>
       <p class="dark-mode info-p "><strong>Programming Languages: </strong>Java, Python, C, C++, LISP, HTML/CSS, Javascript, Bash, SQL, AWK, LaTeX, Smalltalk, Elixir</p>
@@ -139,9 +142,9 @@
       <p class="dark-mode info-p "><strong>Developer Tools:</strong> Unix systems, Arduino IDE, GitHub, GitLab, Canva, Emacs, Figma, Anaconda, IntelliJ, Visual Studio Code, Excel, Adobe Photoshop, WSL, PyCharm, Eclipse, Putty, Vim, Pharo</p>
     </div>
   </div>
+-->
 
-
-<!--Education-->
+<!--Education
 <h1 id="education-section" class="dark-mode info-nopad education-header">Education 🎓</h1>
 <div class="education">
   <div class="box-container">
@@ -150,19 +153,20 @@
           <img src="./resources/images/tmu.jpg" alt="TMU">
       </div>
       <div class="image">
-          <img  class="tmu-logo" src="./resources/images/tmu_logo.jpg" alt="Your Image"> <!-- Replace with your image path -->
+          <img  class="tmu-logo" src="./resources/images/tmu_logo.jpg" alt="Your Image"> 
+          
+        </div>
+          <div class="content">
+              <h3><strong>B.Sc (Honours) Computer Science</strong></h3>
+              <p>Toronto Metropolitan University</p>
+              <p>Toronto, Ontario, Canada</p>
+              <h4>2022-2025</h4>
+          </div>
       </div>
-      <div class="content">
-          <h3><strong>B.Sc (Honours) Computer Science</strong></h3>
-          <p>Toronto Metropolitan University</p>
-          <p>Toronto, Ontario, Canada</p>
-          <h4>2022-2025</h4>
-      </div>
-  </div>
+    </div>
 </div>
-</div>
+-->
 
-<!--Projects-->
 <h1 id="project-section" class="dark-mode info-nopad projects-header">Projects 👨‍💻</h1>
 <div class="project-images">
   <a href="https://github.com/sankeer28/Streaming-app-simulator" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=sankeer28&repo=Streaming-app-simulator" alt="Streaming app simulator"/></a>
@@ -181,36 +185,27 @@
   <a href="https://github.com/sankeer28/text-editor" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=sankeer28&amp;repo=text-editor"alt="text-editor" /></a>
   <a href="https://github.com/sankeer28/Add-Text-to-Images" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=sankeer28&amp;repo=Add-Text-to-Images"alt="Add-Text-to-Images" /></a>
   <a href="https://github.com/sankeer28/URL-Extractor-and-Downloader" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=sankeer28&amp;repo=URL-Extractor-and-Downloader"alt="URL-Extractor-and-Downloader" /></a>
+  <a href="https://github.com/sankeer28/Gmail-to-Link" target="_blank"><img src="https://github-readme-stats.vercel.app/api/pin/?username=sankeer28&amp;repo=Gmail-to-Link"alt="Gmail-to-Link" /></a>
 
 
-  <!-- Add more images as needed -->
 </div>
 
 
   </article>
 
+  <!--scroll up
   <button id="scroll-button" class="scroll-button">⬆️</button>    
+  -->
     
 
-  
-
     <script src="./resources/javascript/script.js"></script>
-   <!-- Add an ID to the checkbox -->
+  
    
    <script>
-     // Use the ID to select the checkbox
-     const checkbox = document.querySelector('#mode-toggle');
-   
-     checkbox.addEventListener('change', () => {
-       document.body.classList.toggle('dark-mode');
-     });
+
    </script>
    <script>
-    $(function() {
-      $.scrollify({
-        section : ".section",
-      });
-    });
+ 
   </script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js"></script>
    <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
