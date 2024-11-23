@@ -1,0 +1,409 @@
+[
+  {
+    "title": "Youtube-Video-Downloader",
+    "description": "Download Youtube videos - built using Python, streamlit, yt-dlp",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/Youtube-Video-Downloader",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "11/10/2024"
+  },
+  {
+    "title": "stock-predictor",
+    "description": "Multi algorithm stock predictor built using Streamlit",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/stock-predictor",
+    "stars": 1,
+    "forks": 0,
+    "created_at": "11/03/2024"
+  },
+  {
+    "title": "Face-Extractor",
+    "description": "Python script that automates the process of detecting and extracting faces from images using MTCNN algorithm",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/Face-Extractor",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "06/03/2024"
+  },
+  {
+    "title": "WhatsMyName-Python",
+    "description": "Python script to return URLs of any site where given username exists",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/WhatsMyName-Python",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "06/01/2024"
+  },
+  {
+    "title": "DiscordBot-v2",
+    "description": "Discord bot made using python with many features including AI chat, music playback, video downloader, OSINT tools, and more",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/DiscordBot-v2",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/27/2024"
+  },
+  {
+    "title": "tic-tac-toe",
+    "description": "Browser-based Tic Tac Toe game with two modes: Player vs Player (1v1) and Player vs Computer which uses a minimax approach.",
+    "technologies": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/sankeer28/tic-tac-toe",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/26/2024"
+  },
+  {
+    "title": "CLI-MUSIC",
+    "description": "Search, Download, Play songs in your Terminal",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/CLI-MUSIC",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/23/2024"
+  },
+  {
+    "title": "Music-Player",
+    "description": "GUI using Tkinter for YT-DLP, allows user to search, download, and play songs",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/Music-Player",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/22/2024"
+  },
+  {
+    "title": "Lyric-Finder",
+    "description": "Discover song lyrics using Genius API",
+    "technologies": [
+      "HTML"
+    ],
+    "link": "https://github.com/sankeer28/Lyric-Finder",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/17/2024"
+  },
+  {
+    "title": "Git-Scraper",
+    "description": "returns users' public repos and respective descriptions in CLI and JSON",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/Git-Scraper",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/15/2024"
+  },
+  {
+    "title": "Spotify-Downloader",
+    "description": "Python script to download spotify playlist songs as .mp3 locally",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/Spotify-Downloader",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/15/2024"
+  },
+  {
+    "title": "Canada-News-Scraper",
+    "description": "Webscrapes Canadian news sites to show top stories",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/Canada-News-Scraper",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/14/2024"
+  },
+  {
+    "title": "Spedup-Slowed-MV",
+    "description": "Python script to create sped up or slowed down music videos with static or animated backgrounds using audio extracted from url",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/Spedup-Slowed-MV",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/06/2024"
+  },
+  {
+    "title": "CPS412-Research-Analysis",
+    "description": "Survey results for the topic: Future of ChatGPT's use in academia",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/CPS412-Research-Analysis",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "04/27/2024"
+  },
+  {
+    "title": "IP-INFO",
+    "description": "All information collectable through your IP addess ",
+    "technologies": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/sankeer28/IP-INFO",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "04/19/2024"
+  },
+  {
+    "title": "Boggle-Solver",
+    "description": "Solver for the game of Boggle in Elixir, Haskell, and Rust",
+    "technologies": [
+      "Rust"
+    ],
+    "link": "https://github.com/sankeer28/Boggle-Solver",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "04/10/2024"
+  },
+  {
+    "title": "VoiceAid",
+    "description": "An Audio-Interactive Document Assistant for the Visually Impaired powered by Google's Gemini",
+    "technologies": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/sankeer28/VoiceAid",
+    "stars": 1,
+    "forks": 0,
+    "created_at": "04/06/2024"
+  },
+  {
+    "title": "Random-Character-Generator",
+    "description": "Random character generator / character counter",
+    "technologies": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/sankeer28/Random-Character-Generator",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "04/01/2024"
+  },
+  {
+    "title": "Gmail-to-Link",
+    "description": "Create sharable emails that can be shared as short links",
+    "technologies": [
+      "CSS"
+    ],
+    "link": "https://github.com/sankeer28/Gmail-to-Link",
+    "stars": 0,
+    "forks": 1,
+    "created_at": "03/17/2024"
+  },
+  {
+    "title": "URL-Extractor-and-Downloader",
+    "description": "Extracts multiple URLs from text, and if downloadable, downloads them into a ZIP",
+    "technologies": [
+      "HTML"
+    ],
+    "link": "https://github.com/sankeer28/URL-Extractor-and-Downloader",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "03/06/2024"
+  },
+  {
+    "title": "Club_Manager",
+    "description": "Recreational club website to manage membership",
+    "technologies": [
+      "HTML"
+    ],
+    "link": "https://github.com/sankeer28/Club_Manager",
+    "stars": 0,
+    "forks": 1,
+    "created_at": "03/05/2024"
+  },
+  {
+    "title": "text-editor",
+    "description": "Text editor webapp",
+    "technologies": [
+      "HTML"
+    ],
+    "link": "https://github.com/sankeer28/text-editor",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "02/20/2024"
+  },
+  {
+    "title": "Add-Text-to-Images",
+    "description": "Add text to images",
+    "technologies": [
+      "HTML"
+    ],
+    "link": "https://github.com/sankeer28/Add-Text-to-Images",
+    "stars": 0,
+    "forks": 2,
+    "created_at": "02/14/2024"
+  },
+  {
+    "title": "Gemini-Homework-Helper",
+    "description": "Upload pdfs, Docx, images and ask your AI tutor Gemini questions ",
+    "technologies": [
+      "HTML"
+    ],
+    "link": "https://github.com/sankeer28/Gemini-Homework-Helper",
+    "stars": 1,
+    "forks": 0,
+    "created_at": "02/09/2024"
+  },
+  {
+    "title": "PDF-Searcher",
+    "description": "Live website to parse multiple PDFs using PDF.js to find matching text",
+    "technologies": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/sankeer28/PDF-Searcher",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "02/08/2024"
+  },
+  {
+    "title": "Soundboard",
+    "description": "Soundboard made using Electron",
+    "technologies": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/sankeer28/Soundboard",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "02/06/2024"
+  },
+  {
+    "title": "Math-PDF-Generator-Web",
+    "description": "Random Math PDF Generator - web based",
+    "technologies": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/sankeer28/Math-PDF-Generator-Web",
+    "stars": 3,
+    "forks": 0,
+    "created_at": "02/04/2024"
+  },
+  {
+    "title": "Bash-Hangman",
+    "description": "CLI Hangman game",
+    "technologies": [
+      "Shell"
+    ],
+    "link": "https://github.com/sankeer28/Bash-Hangman",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "01/14/2024"
+  },
+  {
+    "title": "Simple-Calculator",
+    "description": "Simple calculator built with HTML, CSS, and JavaScript",
+    "technologies": [
+      "CSS"
+    ],
+    "link": "https://github.com/sankeer28/Simple-Calculator",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "01/09/2024"
+  },
+  {
+    "title": "QR-Code-Generator",
+    "description": "Simple web-based QR code generator",
+    "technologies": [
+      "CSS"
+    ],
+    "link": "https://github.com/sankeer28/QR-Code-Generator",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "01/08/2024"
+  },
+  {
+    "title": "To-do-list",
+    "description": "Todo List application built with HTML, CSS, and JavaScript. ",
+    "technologies": [
+      "CSS"
+    ],
+    "link": "https://github.com/sankeer28/To-do-list",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "01/08/2024"
+  },
+  {
+    "title": "Weather",
+    "description": "Weather app using OpenWeatherMap API, HTML, CSS, & JavaScript",
+    "technologies": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/sankeer28/Weather",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "01/08/2024"
+  },
+  {
+    "title": "Streaming-app-simulator",
+    "description": "OOP Java CLI simulator of a music streaming app with a library, playlists, audiobooks, lyrics, sorting by date, time, size",
+    "technologies": [
+      "Java"
+    ],
+    "link": "https://github.com/sankeer28/Streaming-app-simulator",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "08/06/2023"
+  },
+  {
+    "title": "Random-Math-PDF-Generator",
+    "description": "A simple random math pdf generator using Tkinter and FPDF",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/Random-Math-PDF-Generator",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/29/2023"
+  },
+  {
+    "title": "Similar-text",
+    "description": "Given any English letter from the alphabet, outputs all the similar looking text characters available on cli / web-app ",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/Similar-text",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/19/2023"
+  },
+  {
+    "title": "DiscordBot-v1",
+    "description": "Personal Discord bot, built using  Discord.js and Node.js. ",
+    "technologies": [
+      "JavaScript"
+    ],
+    "link": "https://github.com/sankeer28/DiscordBot-v1",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/11/2023"
+  },
+  {
+    "title": "Periodic-Table",
+    "description": "A simple python based period table search CLI tool",
+    "technologies": [
+      "Python"
+    ],
+    "link": "https://github.com/sankeer28/Periodic-Table",
+    "stars": 0,
+    "forks": 0,
+    "created_at": "05/10/2023"
+  }
+]
