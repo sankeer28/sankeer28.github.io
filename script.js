@@ -9,7 +9,8 @@ async function fetchAllGitHubRepos() {
     try {
         const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&type=all`, {
             headers: {
-                'Accept': 'application/vnd.github.v3+json'
+                'Accept': 'application/vnd.github.v3+json',
+                'Authorization': `token ${TOKEN}`
             }
         });
 
@@ -28,7 +29,8 @@ async function fetchAllGitHubRepos() {
                 try {
                     const languagesResponse = await fetch(repo.languages_url, {
                         headers: {
-                            'Accept': 'application/vnd.github.v3+json'
+                            'Accept': 'application/vnd.github.v3+json',
+                            'Authorization': `token ${TOKEN}`
                         }
                     });
                     
