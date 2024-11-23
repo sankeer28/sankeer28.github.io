@@ -1,90 +1,15 @@
-const EXCLUDED_REPOS = [
-    'sankeer28',
-    'sankeer28.github.io',
-    'Blender-Donut'
-];
 
-const TOKEN = 'ghp_' + atob('your-base64-encoded-token');
 
 async function fetchAllGitHubRepos() {
-    const username = 'sankeer28';
     try {
-        const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&type=all`, {
-            headers: {
-                'Accept': 'application/vnd.github.v3+json',
-                'Authorization': `Bearer ${TOKEN}`
-            }
-        });
-
-        if (!response.ok) {
-            const cached = localStorage.getItem('githubRepos');
-            if (cached) {
-                return JSON.parse(cached).data;
-            }
-            throw new Error('GitHub API request failed');
-        }
-
-        const repos = await response.json();
-        const repoPromises = repos
-            .filter(repo => !EXCLUDED_REPOS.includes(repo.name))
-            .map(async repo => {
-                try {
-                    const languagesResponse = await fetch(repo.languages_url, {
-                        headers: {
-                            'Accept': 'application/vnd.github.v3+json',
-                            'Authorization': `Bearer ${TOKEN}`
-                        }
-                    });
-                    
-                    if (!languagesResponse.ok) {
-                        return {
-                            title: repo.name,
-                            description: repo.description || 'No description available',
-                            technologies: [repo.language].filter(Boolean), 
-                            link: repo.html_url,
-                            stars: repo.stargazers_count,
-                            forks: repo.forks_count,
-                            created_at: new Date(repo.created_at).toLocaleDateString()
-                        };
-                    }
-
-                    const languages = await languagesResponse.json();
-                    return {
-                        title: repo.name,
-                        description: repo.description || 'No description available',
-                        technologies: Object.keys(languages).length ? Object.keys(languages) : [repo.language].filter(Boolean),
-                        link: repo.html_url,
-                        stars: repo.stargazers_count,
-                        forks: repo.forks_count,
-                        created_at: new Date(repo.created_at).toLocaleDateString()
-                    };
-                } catch (error) {
-                    return {
-                        title: repo.name,
-                        description: repo.description || 'No description available',
-                        technologies: [repo.language].filter(Boolean),
-                        link: repo.html_url,
-                        stars: repo.stargazers_count,
-                        forks: repo.forks_count,
-                        created_at: new Date(repo.created_at).toLocaleDateString()
-                    };
-                }
-            });
-
-        const sortedRepos = await Promise.all(repoPromises);
-        sortedRepos.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-
-        localStorage.setItem('githubRepos', JSON.stringify({
-            data: sortedRepos,
-            timestamp: Date.now()
-        }));
-
-        return sortedRepos;
+        const response = await fetch('./repos.json');
+        const data = await response.json();
+        return data;
     } catch (error) {
-        console.log('Using fallback data');
+        console.log('Reading from fallback data');
         return [{
             title: "Portfolio",
-            description: "My personal portfolio website",
+            description: "Default repository",
             technologies: ["JavaScript"],
             link: "https://github.com/sankeer28/portfolio",
             stars: 0,
@@ -93,6 +18,7 @@ async function fetchAllGitHubRepos() {
         }];
     }
 }
+
 
 
 
