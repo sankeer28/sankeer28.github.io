@@ -4,13 +4,15 @@ const EXCLUDED_REPOS = [
     'Blender-Donut'
 ];
 
+const TOKEN = 'ghp_' + atob('your-base64-encoded-token');
+
 async function fetchAllGitHubRepos() {
     const username = 'sankeer28';
     try {
         const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=100&type=all`, {
             headers: {
                 'Accept': 'application/vnd.github.v3+json',
-                'Authorization': `token ${TOKEN}`
+                'Authorization': `Bearer ${TOKEN}`
             }
         });
 
@@ -30,7 +32,7 @@ async function fetchAllGitHubRepos() {
                     const languagesResponse = await fetch(repo.languages_url, {
                         headers: {
                             'Accept': 'application/vnd.github.v3+json',
-                            'Authorization': `token ${TOKEN}`
+                            'Authorization': `Bearer ${TOKEN}`
                         }
                     });
                     
