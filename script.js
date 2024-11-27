@@ -19,6 +19,24 @@ async function fetchAllGitHubRepos() {
     }
 }
 
+function typeWriter() {
+    const text = "Sankeerthikan Nimalathas";
+    const typedTextElement = document.querySelector('.typed-text');
+    let i = 0;
+    const speed = 150;
+
+    function type() {
+        if (i < text.length) {
+            typedTextElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+
+    type();
+}
+
+document.addEventListener('DOMContentLoaded', typeWriter);
 
 
 
