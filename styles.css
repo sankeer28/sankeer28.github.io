@@ -37,11 +37,71 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: var(--tokyo-night);
+    background: rgba(26, 27, 38, 0.7);
     border: 1px solid var(--tokyo-purple);
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 20px;
+    backdrop-filter: blur(3px);
+    position: relative;
+    overflow: hidden;
 }
+
+.typed-text {
+    color: var(--tokyo-blue);
+    text-shadow: 0 0 10px rgba(122, 162, 247, 0.5),
+                 0 0 20px rgba(122, 162, 247, 0.3),
+                 0 0 30px rgba(122, 162, 247, 0.2);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(122, 162, 247, 0.5),
+                     0 0 20px rgba(122, 162, 247, 0.3),
+                     0 0 30px rgba(122, 162, 247, 0.2);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(122, 162, 247, 0.6),
+                     0 0 30px rgba(122, 162, 247, 0.4),
+                     0 0 40px rgba(122, 162, 247, 0.3),
+                     0 0 50px rgba(122, 162, 247, 0.2);
+    }
+}
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* Gradient border effect */
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 1px;
+    background: linear-gradient(
+        45deg,
+        var(--tokyo-purple) 0%,
+        var(--tokyo-blue) 50%,
+        var(--tokyo-cyan) 100%
+    );
+    mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* Rest of your existing hero styles remain the same */
+
 
 .hero h1 {
     font-size: 3rem;
@@ -62,6 +122,50 @@ body {
     content: "// ";
     color: var(--tokyo-green);
 }
+
+.hero h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .section::before {
+        display: none;
+    }
+    
+    .education-card, .project-card {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .profile-picture {
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
 
 
 .section h2 {
@@ -207,24 +311,7 @@ body {
     background: var(--tokyo-blue);
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero p {
-        font-size: 1.2rem;
-    }
-    
-    .section::before {
-        display: none;
-    }
-    
-    .education-card, .project-card {
-        margin: 10px;
-    }
-}
+
 .modal {
     display: none;
     position: fixed;
@@ -370,14 +457,7 @@ body {
     }
 }
 
-.hero h1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+
 
 .profile-picture {
     width: 250px;
@@ -404,20 +484,6 @@ body {
 
 .profile-picture:hover img {
     transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-    .hero h1 {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .profile-picture {
-        margin: 0 auto;
-        width: 120px;
-        height: 120px;
-    }
 }
 
 
@@ -461,4 +527,58 @@ body {
         gap: 16px;
         padding: 16px;
     }
+}
+
+.skills-card {
+    background: #1f2335;
+    border: 1px solid var(--tokyo-blue);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category {
+    margin-bottom: 25px;
+}
+
+.skill-category h3 {
+    color: var(--tokyo-purple);
+    margin-bottom: 15px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags .badge {
+    background: var(--tokyo-night);
+    color: var(--tokyo-cyan);
+    border: 1px solid var(--tokyo-cyan);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tags .badge:hover {
+    background: var(--tokyo-cyan);
+    color: var(--tokyo-night);
+    transform: translateY(-2px);
+}
+
+.typed-text {
+    color: var(--tokyo-blue);
+}
+
+.cursor {
+    color: var(--tokyo-purple);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
