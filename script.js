@@ -1,30 +1,28 @@
 const EXCLUDED_REPOS = ['sankeer28', 'sankeer28.github.io', 'Blender-Donut'];
 
 async function fetchAllGitHubRepos() {
+    const headers = {
+        'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+        'Accept': 'application/vnd.github.v3+json'
+    };
+
     try {
-        const response = await fetch('https://api.github.com/users/sankeer28/repos?per_page=100');
+        const response = await fetch('https://api.github.com/users/sankeer28/repos?per_page=100', { headers });
         const repos = await response.json();
         
         const filteredRepos = await Promise.all(
             repos
                 .filter(repo => !EXCLUDED_REPOS.includes(repo.name))
                 .map(async repo => {
-                    let technologies = [repo.language || 'Other']; // Default to main language
-                    
-                    try {
-                        const languagesResponse = await fetch(repo.languages_url);
-                        if (languagesResponse.ok) {
-                            const languages = await languagesResponse.json();
-                            technologies = Object.keys(languages);
-                        }
-                    } catch (error) {
-                        console.log(`Failed to fetch languages for ${repo.name}`);
-                    }
+                    let technologies = [];
+                    const languagesResponse = await fetch(repo.languages_url, { headers });
+                    const languages = await languagesResponse.json();
+                    technologies = Object.keys(languages);
                     
                     return {
                         title: repo.name,
                         description: repo.description || 'No description available',
-                        technologies: technologies,
+                        technologies: technologies.length ? technologies : [repo.language || 'Other'],
                         link: repo.html_url,
                         stars: repo.stargazers_count,
                         forks: repo.forks_count,
