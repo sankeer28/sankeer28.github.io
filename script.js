@@ -1,28 +1,24 @@
+const EXCLUDED_REPOS = ['sankeer28', 'sankeer28.github.io', 'Blender-Donut'];
 
 async function fetchAllGitHubRepos() {
     try {
-        const response = await fetch('https://api.github.com/users/sankeer28/repos', {
-            headers: {
-                'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
-                'Accept': 'application/vnd.github.v3+json'
-            }
-        });
-        
-        if (!response.ok) {
-            throw new Error('GitHub API request failed');
-        }
-
+        const response = await fetch('https://api.github.com/users/sankeer28/repos?per_page=100');
         const repos = await response.json();
         
-        return repos.map(repo => ({
-            title: repo.name,
-            description: repo.description || 'No description available',
-            technologies: [repo.language].filter(Boolean),
-            link: repo.html_url,
-            stars: repo.stargazers_count,
-            forks: repo.forks_count,
-            created_at: new Date(repo.created_at).toLocaleDateString()
-        }));
+        const filteredRepos = repos
+            .filter(repo => !EXCLUDED_REPOS.includes(repo.name))
+            .map(repo => ({
+                title: repo.name,
+                description: repo.description || 'No description available',
+                technologies: [repo.language || 'Other'],
+                link: repo.html_url,
+                stars: repo.stargazers_count,
+                forks: repo.forks_count,
+                created_at: repo.created_at
+            }))
+            .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+        return filteredRepos;
     } catch (error) {
         console.log('Error fetching GitHub repos:', error);
         return [{
@@ -36,7 +32,6 @@ async function fetchAllGitHubRepos() {
         }];
     }
 }
-
 function typeWriter() {
     const text = "Sankeerthikan Nimalathas";
     const typedTextElement = document.querySelector('.typed-text');
