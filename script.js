@@ -1,12 +1,33 @@
-
+const EXCLUDED_REPOS = ['sankeer28', 'sankeer28.github.io', 'Blender-Donut'];
 
 async function fetchAllGitHubRepos() {
     try {
-        const response = await fetch('./repos.json');
-        const data = await response.json();
-        return data;
+        const response = await fetch('https://api.github.com/users/sankeer28/repos?per_page=100');
+        const repos = await response.json();
+        
+        const filteredRepos = await Promise.all(
+            repos
+                .filter(repo => !EXCLUDED_REPOS.includes(repo.name))
+                .map(async repo => {
+                    // Fetch languages for each repository
+                    const languagesResponse = await fetch(repo.languages_url);
+                    const languages = await languagesResponse.json();
+                    
+                    return {
+                        title: repo.name,
+                        description: repo.description || 'No description available',
+                        technologies: Object.keys(languages),
+                        link: repo.html_url,
+                        stars: repo.stargazers_count,
+                        forks: repo.forks_count,
+                        created_at: repo.created_at
+                    };
+                })
+        );
+
+        return filteredRepos.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
     } catch (error) {
-        console.log('Reading from fallback data');
+        console.log('Error fetching GitHub repos:', error);
         return [{
             title: "Portfolio",
             description: "Default repository",
@@ -18,6 +39,8 @@ async function fetchAllGitHubRepos() {
         }];
     }
 }
+
+
 
 function typeWriter() {
     const text = "Sankeerthikan Nimalathas";
