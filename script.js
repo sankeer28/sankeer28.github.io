@@ -9,14 +9,22 @@ async function fetchAllGitHubRepos() {
             repos
                 .filter(repo => !EXCLUDED_REPOS.includes(repo.name))
                 .map(async repo => {
-                    // Fetch languages for each repository
-                    const languagesResponse = await fetch(repo.languages_url);
-                    const languages = await languagesResponse.json();
+                    let technologies = [repo.language || 'Other']; // Default to main language
+                    
+                    try {
+                        const languagesResponse = await fetch(repo.languages_url);
+                        if (languagesResponse.ok) {
+                            const languages = await languagesResponse.json();
+                            technologies = Object.keys(languages);
+                        }
+                    } catch (error) {
+                        console.log(`Failed to fetch languages for ${repo.name}`);
+                    }
                     
                     return {
                         title: repo.name,
                         description: repo.description || 'No description available',
-                        technologies: Object.keys(languages),
+                        technologies: technologies,
                         link: repo.html_url,
                         stars: repo.stargazers_count,
                         forks: repo.forks_count,
@@ -39,8 +47,6 @@ async function fetchAllGitHubRepos() {
         }];
     }
 }
-
-
 
 function typeWriter() {
     const text = "Sankeerthikan Nimalathas";
