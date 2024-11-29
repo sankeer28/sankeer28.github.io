@@ -1,47 +1,41 @@
-const EXCLUDED_REPOS = ['sankeer28', 'sankeer28.github.io', 'Blender-Donut'];
 
 async function fetchAllGitHubRepos() {
-    const headers = {
-        'Authorization': `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
-        'Accept': 'application/vnd.github.v3+json'
-    };
-
     try {
-        const response = await fetch('https://api.github.com/users/sankeer28/repos?per_page=100', { headers });
-        if (!response.ok) {
-            throw new Error(`GitHub API responded with status: ${response.status}`);
-        }
-        const repos = await response.json();
-        console.log('Fetched repos:', repos); // Debug log
+        const response = await fetch('https://api.github.com/users/sankeer28/repos', {
+            headers: {
+                'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+                'Accept': 'application/vnd.github.v3+json'
+            }
+        });
         
-        const filteredRepos = await Promise.all(
-            repos
-                .filter(repo => !EXCLUDED_REPOS.includes(repo.name))
-                .map(async repo => {
-                    let technologies = [];
-                    const languagesResponse = await fetch(repo.languages_url, { headers });
-                    const languages = await languagesResponse.json();
-                    technologies = Object.keys(languages);
-                    
-                    return {
-                        title: repo.name,
-                        description: repo.description || 'No description available',
-                        technologies: technologies.length ? technologies : [repo.language || 'Other'],
-                        link: repo.html_url,
-                        stars: repo.stargazers_count,
-                        forks: repo.forks_count,
-                        created_at: repo.created_at
-                    };
-                })
-        );
+        if (!response.ok) {
+            throw new Error('GitHub API request failed');
+        }
 
-        return filteredRepos.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+        const repos = await response.json();
+        
+        return repos.map(repo => ({
+            title: repo.name,
+            description: repo.description || 'No description available',
+            technologies: [repo.language].filter(Boolean),
+            link: repo.html_url,
+            stars: repo.stargazers_count,
+            forks: repo.forks_count,
+            created_at: new Date(repo.created_at).toLocaleDateString()
+        }));
     } catch (error) {
-        console.error('Error details:', error); // Enhanced error logging
-        throw error; // Propagate the error
+        console.log('Error fetching GitHub repos:', error);
+        return [{
+            title: "Portfolio",
+            description: "Default repository",
+            technologies: ["JavaScript"],
+            link: "https://github.com/sankeer28/portfolio",
+            stars: 0,
+            forks: 0,
+            created_at: new Date().toLocaleDateString()
+        }];
     }
 }
-
 
 function typeWriter() {
     const text = "Sankeerthikan Nimalathas";
