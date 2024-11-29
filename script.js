@@ -22,10 +22,10 @@ async function fetchAllGitHubRepos() {
     } catch (error) {
         console.log('Error fetching GitHub repos:', error);
         return [{
-            title: "Portfolio",
-            description: "Default repository",
+            title: "New Portfolio",
+            description: "If you see only this project, website link has changed",
             technologies: ["JavaScript"],
-            link: "https://github.com/sankeer28/portfolio",
+            link: "https://sankeer.vercel.app/",
             stars: 0,
             forks: 0,
             created_at: new Date().toLocaleDateString()
