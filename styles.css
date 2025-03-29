@@ -225,6 +225,57 @@ body {
     color: var(--tokyo-purple);
 }
 
+/* Experience Section Styling */
+.experience-card {
+    background: #1f2335;
+    border: 1px solid var(--tokyo-blue);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px 0;
+    font-family: var(--code-font);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card::before {
+    content: "$ cat experience.json";
+    color: var(--tokyo-green);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.experience-card h3 {
+    color: var(--tokyo-purple);
+    margin-bottom: 10px;
+}
+
+.experience-card .position {
+    color: var(--tokyo-blue);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.experience-card .date {
+    color: var(--tokyo-cyan);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.experience-card .responsibilities {
+    padding-left: 20px;
+}
+
+.experience-card .responsibilities li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.experience-card .responsibilities li::before {
+    content: ">";
+    color: var(--tokyo-green);
+    position: absolute;
+    left: -15px;
+}
+
 .project-card {
     background: #1f2335;
     border-left: 3px solid var(--tokyo-blue);
