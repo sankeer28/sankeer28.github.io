@@ -87,7 +87,7 @@ body {
     position: absolute;
     inset: 0;
     border-radius: 8px;
-    padding: 1px;
+    padding: 0.5px; /* Reduced from 1px to make the border thinner */
     background: linear-gradient(
         45deg,
         var(--tokyo-purple) 0%,
@@ -205,13 +205,16 @@ body {
 }
 
 .education-card {
-    background: #1f2335;
+    background: rgba(31, 35, 53, 0.7);
+    backdrop-filter: blur(3px);
     border: 1px solid var(--tokyo-blue);
     border-radius: 10px;
     padding: 30px;
     margin: 20px 0;
     font-family: var(--code-font);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
 .education-card::before {
@@ -227,13 +230,16 @@ body {
 
 /* Experience Section Styling */
 .experience-card {
-    background: #1f2335;
+    background: rgba(31, 35, 53, 0.7);
+    backdrop-filter: blur(3px);
     border: 1px solid var(--tokyo-blue);
     border-radius: 10px;
     padding: 30px;
     margin: 20px 0;
     font-family: var(--code-font);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
 .experience-card::before {
@@ -277,7 +283,8 @@ body {
 }
 
 .project-card {
-    background: #1f2335;
+    background: rgba(31, 35, 53, 0.7);
+    backdrop-filter: blur(3px);
     border-left: 3px solid var(--tokyo-blue);
     border-radius: 10px;
     padding: 20px;
@@ -285,6 +292,8 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -459,7 +468,8 @@ body {
 }
 
 .project-card {
-    background: #1f2335;
+    background: rgba(31, 35, 53, 0.7);
+    backdrop-filter: blur(3px);
     border-left: 3px solid var(--tokyo-blue);
     border-radius: 10px;
     padding: 20px;
@@ -546,8 +556,18 @@ body {
     padding: 24px;
 }
 
+#project-container .project-card {
+    background: rgba(31, 35, 53, 0.7);
+    backdrop-filter: blur(3px);
+    border-left: 3px solid var(--tokyo-blue);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .project-card {
-    background: #1f2335;
+    background: rgba(31, 35, 53, 0.7);
+    backdrop-filter: blur(3px);
     border-left: 3px solid var(--tokyo-blue);
     border-radius: 10px;
     padding: 24px;
@@ -581,12 +601,15 @@ body {
 }
 
 .skills-card {
-    background: #1f2335;
+    background: rgba(31, 35, 53, 0.7);
+    backdrop-filter: blur(3px);
     border: 1px solid var(--tokyo-blue);
     border-radius: 10px;
     padding: 30px;
     margin: 20px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
 .skill-category {
