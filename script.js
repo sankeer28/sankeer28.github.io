@@ -59,6 +59,7 @@ async function loadProjects() {
         const projects = await fetchAllGitHubRepos();
         console.log('Fetched Projects:', projects); 
         container.innerHTML = projects.map(project => createProjectCard(project)).join('');
+        handleMouseMove(); 
     } catch (error) {
         console.log('Error details:', error);
         container.innerHTML = '<div class="col-12"><p>Loading repositories...</p></div>';
@@ -200,9 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
     new ParticleEffect();
     new CodeAnimation();
+    initThemeSwitcher(); // Initialize theme switcher
 });
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('contactModal');
@@ -224,6 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 // Add this function to track mouse movement
 function handleMouseMove() {
     const cards = document.querySelectorAll('.project-card');
@@ -240,17 +241,42 @@ function handleMouseMove() {
     });
 }
 
-
-async function loadProjects() {
-    const container = document.getElementById('project-container');
-    try {
-        const projects = await fetchAllGitHubRepos();
-        container.innerHTML = projects.map(project => createProjectCard(project)).join('');
-        handleMouseMove(); 
-    } catch (error) {
-        console.log('Error details:', error);
-        container.innerHTML = '<div class="col-12"><p>Loading repositories...</p></div>';
-    }
+// Theme Switcher Functionality
+function initThemeSwitcher() {
+    const themeButtons = document.querySelectorAll('.theme-btn');
+    const storedTheme = localStorage.getItem('theme') || 'tokyo';
+    
+    // Apply stored theme on page load
+    document.body.className = storedTheme !== 'tokyo' ? `theme-${storedTheme}` : '';
+    
+    // Update active button
+    themeButtons.forEach(button => {
+        const btnTheme = button.id.split('-')[1];
+        button.classList.toggle('active', btnTheme === storedTheme);
+    });
+    
+    // Add click event to each button
+    themeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const theme = this.id.split('-')[1];
+            
+            // Remove active class from all buttons
+            themeButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Apply theme
+            if (theme === 'tokyo') {
+                document.body.className = '';
+            } else {
+                document.body.className = `theme-${theme}`;
+            }
+            
+            // Store theme preference
+            localStorage.setItem('theme', theme);
+        });
+    });
 }
 
 class ParticleEffect {
