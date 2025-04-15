@@ -1,4 +1,4 @@
-const EXCLUDED_REPOS = ['sankeer28', 'sankeer28.github.io', 'Blender-Donut'];
+const EXCLUDED_REPOS = ['sankeer28', 'sankeer28.github.io', 'Blender-Donut', 'Operating-Systems'];
 
 async function fetchAllGitHubRepos() {
     try {
